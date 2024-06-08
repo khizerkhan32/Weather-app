@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  transition-duration: 1s;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: end;
+}
+.search-input {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  right: 200px;
+  /* top: 810px; */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  overflow: hidden;
+  padding: 3px;
+  margin-bottom: 46px;
+}
+
+.search-input > input {
+  font-size: 25px;
+  width: 395px;
+  font-size: 40px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  background: transparent;
+}
+
+.search-input > input::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button {
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+.search-button:hover {
+  transform: scale(1.4);
+}
+.Weather-Container {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.Weather-Container > h2 {
+  /* position: absolute; */
+  font-size: 40px;
+  /* left: 73px; */
+  /* top: 870px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top-part {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /* left: 73px; */
+
+  /* top: 673px; */
+}
+
+.top-part > h1 {
+  font-size: 126px;
+}
+
+.condition-high-low {
+  margin-left: 25px;
+}
+
+.condition-high-low > h1:nth-of-type(1) {
+  font-size: 44px;
+}
+
+.condition-high-low > h1:nth-of-type(2),
+h1:nth-of-type(3) {
+  font-size: 26px;
+}
+
+@media (max-width: 1300px) {
+  .search-input > input {
+    width: 330px;
   }
-  to {
-    transform: rotate(360deg);
+  .search-input {
+    right: 116px;
+  }
+}
+
+@media (max-width: 1051px) {
+  .top-part > h1 {
+    font-size: 106px;
+  }
+  .condition-high-low > h1:nth-of-type(1) {
+    font-size: 34px;
+  }
+  .condition-high-low > h1:nth-of-type(2),
+  h1:nth-of-type(3) {
+    font-size: 20px;
+  }
+  .Weather-Container > h2 {
+    font-size: 34px;
+  }
+  .search-input > input {
+    width: 280px;
+  }
+  .search-input {
+    right: 88px;
+  }
+}
+
+@media (max-width: 991px) {
+  .app {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .search-input {
+    position: static;
+  }
+}
+@media (max-width: 768px) {
+  .Weather-Container {
+    margin: 0;
+  }
+  .top-part {
+    flex-direction: column;
+  }
+  .condition-high-low {
+    margin-left: 0;
+  }
+}
+@media (max-width: 620px) {
+  .top-part > h1 {
+    font-size: 80px;
+  }
+  .condition-high-low > h1:nth-of-type(1) {
+    font-size: 30px;
+  }
+  .condition-high-low > h1:nth-of-type(2),
+  h1:nth-of-type(3) {
+    font-size: 18px;
+  }
+  .Weather-Container > h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .search-input > input {
+    font-size: 32px;
+  }
+}
+@media (max-width: 425px) {
+  .search-input > input {
+    width: 228px;
+    font-size: 26px;
+  }
+  .top-part > h1 {
+    font-size: 62px;
+  }
+  .condition-high-low > h1:nth-of-type(1) {
+    font-size: 26px;
+  }
+  .condition-high-low > h1:nth-of-type(2),
+  h1:nth-of-type(3) {
+    font-size: 16px;
+  }
+  .Weather-Container > h2 {
+    font-size: 22px;
+    margin-top: 10px;
   }
 }
