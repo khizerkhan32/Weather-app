@@ -17,7 +17,7 @@ function App() {
 
   const handlefetch = () => {
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=2b659b7217534ad4a5152425240806&q=${place}&days=1&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=2b659b7217534ad4a5152425240806&q=${place}&days=1&aqi=no&alerts=no`
     )
       .then((response) => {
         if (!response.ok) {
